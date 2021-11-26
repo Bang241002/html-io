@@ -1,0 +1,10 @@
+#body{
+    align : center;
+}
+#container{
+    background-color: #6cc0ac;
+    width : 1020px;
+    height: 1020px;
+    cellpadding : 0px;
+    cellspacing : 0px;
+}
