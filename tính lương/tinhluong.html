@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tien luong</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+<div ng-app="costApp" ng-controller="CostController">
+    <b>tiền nhận đc sau thuế</b>
+    <div>
+        số tiền :
+        <input type="number" min="0" ng-model="sotien" required>
+    </div>
+
+    <div>
+        số tháng được thưởng :
+        <input type="number" min="0" ng-model="sothang" required >
+    </div>
+        tiền thuế:
+        <input type="number" min="0" ng-model="tienthue">
+    <div>
+
+    </div>
+
+    <div>
+        <b>tiền nhận được sau thuế:</b>
+        <span>
+                {{tiennhanduoc | currency:' $ '}}
+        </span>
+        <button class="btn" ng-click="pay()">Pay</button>
+    </div>
+
+    <script>
+        var app = angular.module('costApp',[]);
+        app.controller('CostController', function ($scope){
+            $scope.sotien = 0;
+            $scope.sothang= 0;
+            $scope.tienthue = 0;
+            $scope.pay = function (){
+                this.tiennhanduoc = (this.sotien * this.sothang) / this.tienthue
+            };
+        });
+    </script>
+</div>
+</body>
+</html>
