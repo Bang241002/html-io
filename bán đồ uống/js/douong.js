@@ -51,8 +51,10 @@ var danhsachdouong = [
 $( document ).ready(function() {
     var html = ""
     for(var i=0; i< danhsachdouong.length; i++){
-        html += '<p>Mã :'+danhsachdouong[i].ma + ' Tên :'+danhsachdouong[i].ten +'</p>'
-
+        html += '<tr>'
+        html += '<td>'+danhsachdouong[i].ma + '</td>'
+        html += '<td>'+danhsachdouong[i].ten + '</td>'
+        html += '</tr>'
     }
     $('.danhsachsp').html(html)
 
