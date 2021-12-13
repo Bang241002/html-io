@@ -7,27 +7,48 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/douong.js"></script>
 
+
 </head>
 <body>
+<style type="text/css">
+    .header{
+        background: #b0dfc5;
+    }
+    td{
+        border: 1px solid #d7cbcb;
+    }
+    .tien{
+        color:red
+    }
+
+</style>
 <div ng-app="costApp" ng-controller="CostController" >
     <h1>menu</h1>
-    <div class="danhsachsp">
-    </div>
-    <b>tổng tiền khi mua đồ</b>
+    <div >
+        <table style="width: 300px;">
+            <tr class="header">
+                <th>Mã</th>
+                <th>Tên</th>
+            </tr>
+            <tbody class="danhsachsp">
+
+            </tbody>
+        </table>
+    </div><br>
     <div>
-        mời ban nhập đồ uống :
+        Mời ban nhập đồ uống :
         <input oninput="on_chondanhsach(this)" class="chon_danhsach"></input>
-    </div>
+    </div><br>
 
     <div>
         số lương :
         <input type="number" min="0" ng-model="soluong" class="so_luong" required >
-    </div>
+    </div><br>
 
     <div>
         size:
         <input  class="size" oninput="on_chondanhsach(this)"></input>
-    <div>
+    <div><br>
     <div>
        Thành tiền:
         <span  class="tien" ></span>
